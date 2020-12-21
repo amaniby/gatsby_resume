@@ -3,7 +3,7 @@
 docker build -t img1 .
 
 #run the second commmand to create the container with developer mode so you can change the data from the host and get instant changes in the container => you have 
-#to specify the path in the host than the path in the container in my case:
+to specify the path in the host than the path in the container in my case:
 
 
 docker run -p 8000:8000  --mount type=bind,src=C:\docker_test\data\config.js,target=/app/my-resume/config.js img1
@@ -13,8 +13,8 @@ docker run -p 8000:8000  --mount type=bind,src=C:\docker_test\data\config.js,tar
 docker build -t img2 -f Dockerfile2 .
 
 #create directory public  than
-#run this command to create second container ,here we use volume and specify the path in host and path in container so the data generated in the container 
-#will be stored in the directory public
+run this command to create second container ,here we use volume and specify the path in host and path in container so the data generated in the container 
+will be stored in the directory public
 
 
 docker run -v C:\docker_test\data\public:/app/my-resume/public/ img2
