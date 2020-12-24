@@ -6,7 +6,7 @@ docker build -t img1 .
 to specify the path in the host than the path in the container in my case:
 
 
-docker run -p 8000:8000  --mount type=bind,src=C:\docker_test\data\config.js,target=/app/my-resume/config.js img1
+docker run -p 8000:8000  --mount type=bind,source=C:\docker_test\data\config.js,target=/app/my-resume/config.js img1
 
 #than run this command to build the second image
 
