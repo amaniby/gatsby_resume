@@ -12,7 +12,7 @@ docker run -p 8000:8000  --mount type=bind,source=C:\docker_test\data\config.js,
 
 docker build -t img2 -f Dockerfile2 .
 
-#create directory public  than run this command to create second container ,here we use volume and specify the path in host and path in container so the data generated in the directory public of the container will be stored in the directory public
+#create directory public  than run this command to create second container ,here we use volume and specify the path in host and path in container so the data generated in the directory public of the container will be stored in the directory public of the host
 
 
 docker run -v C:\docker_test\data\public:/app/my-resume/public/ img2
