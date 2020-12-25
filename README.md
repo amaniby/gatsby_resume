@@ -8,13 +8,11 @@ to specify the path in the host than the path in the container in my case:
 
 docker run -p 8000:8000  --mount type=bind,source=C:\docker_test\data\config.js,target=/app/my-resume/config.js img1
 
-#than run this command to build the second image
+#than run this command to build the second image 
 
 docker build -t img2 -f Dockerfile2 .
 
-#create directory public  than
-run this command to create second container ,here we use volume and specify the path in host and path in container so the data generated in the container 
-will be stored in the directory public
+#create directory public  than run this command to create second container ,here we use volume and specify the path in host and path in container so the data generated in the directory public of the container will be stored in the directory public
 
 
 docker run -v C:\docker_test\data\public:/app/my-resume/public/ img2
